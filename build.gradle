@@ -41,6 +41,8 @@ repositories {
 
 
 dependencies {
+	compile('org.liquibase:liquibase-core')
+	compile group: 'postgresql', name: 'postgresql', version: '9.1-901-1.jdbc4'
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('com.fasterxml.jackson.module:jackson-module-kotlin')

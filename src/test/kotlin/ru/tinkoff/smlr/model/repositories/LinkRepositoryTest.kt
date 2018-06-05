@@ -17,6 +17,7 @@ import java.util.*
 
 @DatabaseSetup(LinkRepositoryTest.DATASET)
 @DatabaseTearDown(type = DatabaseOperation.DELETE_ALL, value = [LinkRepositoryTest.DATASET])
+@EnableAutoConfiguration
 class LinkRepositoryTest : AbstractRepositoryTest() {
 
     @Autowired
