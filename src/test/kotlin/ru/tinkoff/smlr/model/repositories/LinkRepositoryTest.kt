@@ -11,12 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.boot.test.mock.mockito.MockBean
 import org.springframework.context.annotation.ComponentScan
+import org.springframework.test.context.TestPropertySource
 import ru.tinkoff.smlr.model.AbstractRepositoryTest
 import ru.tinkoff.smlr.model.Link
 import java.util.*
 
 @DatabaseSetup(LinkRepositoryTest.DATASET)
 @DatabaseTearDown(type = DatabaseOperation.DELETE_ALL, value = [LinkRepositoryTest.DATASET])
+@TestPropertySource(properties = ["spring.jmx.enabled:false", "spring.datasource.jmx-enabled:false"])
 @EnableAutoConfiguration
 class LinkRepositoryTest : AbstractRepositoryTest() {
 

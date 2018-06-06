@@ -13,7 +13,7 @@ import ru.tinkoff.smlr.model.repositories.LinkRepositoryTest
 @RunWith(SpringRunner::class)
 @SpringBootTest
 @TestPropertySource(locations = ["classpath:repositories-test.properties"])
-@SpringBootApplication(scanBasePackageClasses = [SmlrApplication::class])
+//@SpringBootApplication(scanBasePackageClasses = [SmlrApplication::class])
 @WebAppConfiguration
 class SmlrApplicationTests {
 
